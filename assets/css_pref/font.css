@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/*--------Lato font------------*/
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("/assets/fonts/Lato/Lato-Regular.eot");
+  src: local("☺"), url("/assets/fonts/Lato/Lato-Regular.woff") format("woff"), url("/assets/fonts/Lato/Lato-Regular.ttf") format("truetype"), url("/assets/fonts/Lato/Lato-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lato-Italic";
+  src: url("/assets/fonts/Lato/Lato-Italic.eot");
+  src: local("☺"), url("/assets/fonts/Lato/Lato-Italic.woff") format("woff"), url("/assets/fonts/Lato/Lato-Italic.ttf") format("truetype"), url("/assets/fonts/Lato/Lato-Italic.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/*--------Lato font------------*/
+/*-----------------------------*/
+/*--------Playfair Display------*/
+@font-face {
+  font-family: "PlayfairDisplay-Regular";
+  src: url("/assets/fonts/Playfair_Display/PlayfairDisplay-Regular.eot");
+  src: local("☺"), url("/assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff") format("woff"), url("/assets/fonts/Playfair_Display/PlayfairDisplay-Regular.ttf") format("truetype"), url("/assets/fonts/Playfair_Display/PlayfairDisplay-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "PlayfairDisplay-Italic";
+  src: url("/assets/fonts/Playfair_Display/PlayfairDisplay-Italic.eot");
+  src: local("☺"), url("/assets/fonts/Playfair_Display/PlayfairDisplay-Italic.woff") format("woff"), url("/assets/fonts/Playfair_Display/PlayfairDisplay-Italic.ttf") format("truetype"), url("/assets/fonts/Playfair_Display/PlayfairDisplay-Italic.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "PlayfairDisplay-Bold";
+  src: url("/assets/fonts/Playfair_Display/PlayfairDisplay-Bold.eot");
+  src: local("☺"), url("/assets/fonts/Playfair_Display/PlayfairDisplay-Bold.woff") format("woff"), url("/assets/fonts/Playfair_Display/PlayfairDisplay-Bold.ttf") format("truetype"), url("/assets/fonts/Playfair_Display/PlayfairDisplay-Bold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Playfair Display-Bold-Italic";
+  src: url("/assets/fonts/Playfair_Display/Playfair Display Bold Italic.eot");
+  src: url("/assets/fonts/Playfair_Display/Playfair Display Bold Italic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Playfair_Display/Playfair Display Bold Italic.woff2") format("woff2"), url("/assets/fonts/Playfair_Display/Playfair Display Bold Italic.woff") format("woff"), url("/assets/fonts/Playfair_Display/Playfair Display Bold Italic.svg#Playfair Display Bold Italic") format("svg");
+  font-weight: 700;
+  font-style: italic;
+  font-stretch: normal;
+  unicode-range: U+0020-2212; }
+
+@font-face {
+  font-family: "Playfair Display Black";
+  src: url("/assets/fonts/Playfair_Display/Playfair Display Black.eot");
+  src: url("/assets/fonts/Playfair_Display/Playfair Display Black.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Playfair_Display/Playfair Display Black.woff2") format("woff2"), url("/assets/fonts/Playfair_Display/Playfair Display Black.woff") format("woff"), url("/assets/fonts/Playfair_Display/Playfair Display Black.svg#Playfair Display Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2212; }
+
+@font-face {
+  font-family: "Playfair Display Black-Italic";
+  src: url("/assets/fonts/Playfair_Display/Playfair Display Black Italic.eot");
+  src: url("/assets/fonts/Playfair_Display/Playfair Display Black Italic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Playfair_Display/Playfair Display Black Italic.woff2") format("woff2"), url("/assets/fonts/Playfair_Display/Playfair Display Black Italic.woff") format("woff"), url("/assets/fonts/Playfair_Display/Playfair Display Black Italic.svg#Playfair Display Black Italic") format("svg");
+  font-weight: 900;
+  font-style: italic;
+  font-stretch: normal;
+  unicode-range: U+0020-2212; }
+
+/*--------Playfair Display------*/
