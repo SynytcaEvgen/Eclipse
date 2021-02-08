@@ -90,18 +90,18 @@
                         сегодняшний вечер, а под рукой нет переводчика?
                     </p>
                     <p class="fbc-sl">Решите задачу сейчас:</p>
-                    <form class="form" method="get" onsubmit="return false">
+                    <form class="form" method="get">
                         <div class="input_wrap">
-                          <input type="text" placeholder="Введите имя:">
+                          <input type="text" placeholder="Введите имя:" required>
                         </div>
                         <div class="input_wrap">
-                          <input type="tel" placeholder="Введите телефон:">
+                          <input type="tel" placeholder="Введите телефон:" required>
                         </div>
                         <div class="sub-input_wrap">
                             <input type="submit" value="Нужен срочный перевод">
                         </div>
                     </form>
-                    <p class="send-aprove hide">Спасибо, ваш запрос отправлен.</p>
+                    <p class="send-aprove">Спасибо, ваш запрос отправлен.</p>
                 </div>
                 
             </div>
@@ -135,15 +135,15 @@
         <div class="popup__wrapper">
             <div class="popup__content">
                 <h2 class="header-popup">Заполните форму</h2>
-                <form class="form" method="get" onsubmit="return false">
+                <form class="form" method="get">
                     <div class="input_wrap">
-                        <input type="text" placeholder="Введите имя и фамилию:">
+                        <input type="text" placeholder="Введите имя и фамилию:" required>
                     </div>
                     <div class="input_wrap">
-                        <input type="tel" placeholder="Введите номер телефона:">
+                        <input type="tel" placeholder="Введите номер телефона:" pattern="[0-9]{11}" required>
                     </div>
                     <div class="input_wrap">
-                        <input type="email" placeholder="Введите e-mail:">
+                        <input type="email" placeholder="Введите e-mail:" required>
                     </div>
                     <div class="sub-input_wrap">
                         <input type="submit" value="ЗАКАЗАТЬ ЗВОНОК">
@@ -156,15 +156,15 @@
         <div class="popup__wrapper">
             <div class="popup__content">
                 <h2 class="header-popup">Заполните форму</h2>
-                <form class="form" method="get" onsubmit="return false">
+                <form class="form" method="get">
                     <div class="input_wrap">
-                        <input type="text" placeholder="Введите имя и фамилию:">
+                        <input type="text" placeholder="Введите имя и фамилию:" required>
                     </div>
                     <div class="input_wrap">
-                        <input type="tel" placeholder="Введите номер телефона:">
+                        <input type="tel" placeholder="Введите номер телефона:" pattern="[0-9]{11}" required>
                     </div>
                     <div class="input_wrap">
-                        <input type="email" placeholder="Введите e-mail:">
+                        <input type="email" placeholder="Введите e-mail:" required>
                     </div>
                     <div class="sub-input_wrap">
                         <input type="submit" value="ЗАКАЗАТЬ ПЕРЕВОД">
@@ -173,10 +173,10 @@
             </div>
         </div>
     </div>
-    <div id="popup_galerry" class="popup" hidden>
+    <div id="popup_galerry" class="popup">
         <div class="popup__wrapper">
             <div class="popup__content">
-                
+             <img src="" alt="">   
             </div>
         </div>
     </div>
@@ -209,7 +209,7 @@
                            </div>
                       </div>
                   </div>
-               <!-- <div class="slider-items">
+               <div class="slider-items">
                     <div class="img-wrap">
                         <img src="/assets/images/slide_2.png" alt="slide_2">
                     </div>
@@ -255,15 +255,15 @@
                             <p>Больше текстов – перевод быстрее и выгоднее!</p>
                         </div>
                     </div>
-                </div>-->
+                </div>
               </div>
               <div class="nav-dot-wrapp">
                   <ul class="nav-dot">
-                      <li class="dot-items bulett-active"><a href="#"></a></li>
-                      <li class="dot-items"><a href="#"></a></li>
-                      <li class="dot-items"><a href="#"></a></li>
-                      <li class="dot-items"><a href="#"></a></li>
-                      <li class="dot-items"><a href="#"></a></li>
+                      <li class="dot-items"><span name="1"></span></li>
+                      <li class="dot-items"><span name="2"></span></li>
+                      <li class="dot-items"><span name="3"></span></li>
+                      <li class="dot-items"><span name="4"></span></li>
+                      <li class="dot-items"><span name="5"></span></li>
                   </ul>
               </div>
           </div>
@@ -390,15 +390,15 @@
               </div>
               <div class="fbc-wrapp" style="background-image: url(/assets/images/FBC_bg_sdw.png);">
                   <p class="fbc-best">Мы предложим вам лучшее решение для вашей задачи:</p>
-                  <form class="form" method="get" onsubmit="return false">
+                  <form class="form" method="get">
                     <div class="input_wrap">
-                        <input type="text"  placeholder="Введите имя:">
+                        <input type="text"  placeholder="Введите имя:" required>
                     </div>
                     <div class="input_wrap">
-                        <input type="tel" placeholder="Введите телефон:">
+                        <input type="tel" placeholder="Введите телефон:" required>
                     </div>
                     <div class="input_wrap">
-                        <input type="email" placeholder="Введите e-mail:">
+                        <input type="email" placeholder="Введите e-mail:" required>
                     </div>
                     <div class="sub-input_wrap">
                       <input type="submit" value="ЗАКАЗАТЬ УСТНЫЙ ПЕРЕВОД">
@@ -438,15 +438,15 @@
                         <p>Остались вопросы?</p>
                         <p>Задайте их </br>нашему консультанту:</p>
                     </div>
-                    <form class="form" method="get" onsubmit="return false">
+                    <form class="form" method="get">
                         <div class="input_wrap">
-                            <input type="text" placeholder="Введите имя:">
+                            <input type="text" placeholder="Введите имя:" required>
                         </div>
                         <div class="input_wrap">
-                            <input type="email" placeholder="Введите e-mail:">
+                            <input type="email" placeholder="Введите e-mail:" required>
                         </div>
                         <div class="input_wrap">
-                            <textarea placeholder="Ваш вопрос:"></textarea>
+                            <textarea placeholder="Ваш вопрос:" required></textarea>
                         </div>
                         <div class="sub-input_wrap">
                             <input type="submit" value="спросить">
