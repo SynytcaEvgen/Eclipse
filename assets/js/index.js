@@ -117,7 +117,7 @@ function init() {
             function init() { 
              for (let i = 0; i < dots.length; i++) {
                  dots[i].addEventListener('click', (e) => {
-                     let dot = +e.target.getAttribute("name");
+                     let dot = +e.target.getAttribute("title");
                      currentSlide(dot);
                  });
                 };
