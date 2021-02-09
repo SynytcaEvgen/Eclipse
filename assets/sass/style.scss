@@ -752,7 +752,7 @@ body {
       position: relative;
       margin: 0 auto;
       text-align: center;
-      max-width: 235px + $padding_pop * 2;
+      width: 235px + $padding_pop * 2;
       padding: 60px $padding_pop 70px;
       background-color: $color_ivert;
       .header-popup {

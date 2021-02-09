@@ -734,7 +734,7 @@ body.lock-scroll {
       position: relative;
       margin: 0 auto;
       text-align: center;
-      max-width: 395px;
+      width: 395px;
       padding: 60px 80px 70px;
       background-color: #fff; }
       .popup .popup__wrapper .popup__content .header-popup {
