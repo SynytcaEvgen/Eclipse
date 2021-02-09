@@ -150,6 +150,7 @@ function init() {
     menuSticky();
     PopUpLogic();
     sliderRunner();
+    burgerLogic();
 
    
    

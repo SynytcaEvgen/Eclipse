@@ -20,7 +20,22 @@ $color-action: #faca3d;
 /*--colors--*/
 /*--var--*/
 $padding_pop: 80px;
+$k: 0.7;
+$maxWidth: 1920;
+$widthCont: 1200px;
 /*--var--*/
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $addMobSize: $addSize + $addSize * $k;
+  @media (max-width: 767px) {
+    font-size: calc(
+      #{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth})
+    );
+  }
+  @media (min-width: 767px) {
+    font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+  }
+}
 html {
   font-family: $roboto_regular;
   color: $color_text;
@@ -32,13 +47,17 @@ body {
   }
 }
 .header_wrapper {
-  max-width: 1920px;
+  max-width: #{$maxWidth + px};
+  margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 50px;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .border-content {
-  max-width: 1170px;
+  max-width: $widthCont;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -48,6 +67,9 @@ body {
   padding-bottom: 60px;
   .header-logo {
     max-width: 175px;
+    img {
+      width: 100%;
+    }
   }
   .header-contact {
     .lg-option {
@@ -56,9 +78,14 @@ body {
       color: $color_lg;
       font-family: $roboto_ligt;
       padding-bottom: 35px;
-      font-size: 18px;
+      @include adaptiv-font(18, 16);
       .lg-option-items {
         padding-left: 20px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          font-family: $roboto_bold;
+          color: $color_ivert;
+        }
       }
       .lg-active {
         font-family: $roboto_bold;
@@ -68,7 +95,7 @@ body {
     .sl-text {
       color: $color_ivert;
       text-transform: uppercase;
-      font-size: 25px;
+      @include adaptiv-font(25, 23);
       padding-bottom: 10px;
       span {
         display: block;
@@ -84,10 +111,10 @@ body {
         text-align: right;
       }
       :first-child {
-        font-size: 35px;
+        @include adaptiv-font(35, 30);
       }
       :last-child {
-        font-size: 20px;
+        @include adaptiv-font(20, 18);
       }
     }
     .btn-wrapp {
@@ -99,7 +126,7 @@ body {
 .btn {
   background-color: $color_accent;
   color: $color_ivert;
-  font-size: 15px;
+  @include adaptiv-font(15, 13);
   text-transform: uppercase;
   padding: 10px 40px;
   text-align: right;
@@ -127,18 +154,18 @@ body {
       color: $color_accent;
       padding-bottom: 85px;
       p {
-        font-size: 30px;
+        @include adaptiv-font(30, 28);
         font-family: $roboto_ligt;
         padding-bottom: 18px;
       }
       :first-child {
-        font-size: 22px;
+        @include adaptiv-font(22, 20);
         font-family: $roboto_bold;
         padding-bottom: 14px;
         text-transform: uppercase;
       }
       :last-child {
-        font-size: 50px;
+        @include adaptiv-font(50, 40);
         font-family: $roboto_bold;
         text-transform: uppercase;
       }
@@ -155,14 +182,13 @@ body {
         padding-bottom: 25px;
         p {
           text-align: center;
+          white-space: normal;
         }
         img {
           padding-bottom: 15px;
         }
       }
     }
-  }
-  .rigth-side-wrapp {
   }
 }
 .fbc-wrapp {
@@ -171,21 +197,22 @@ body {
   padding: 60px 33px 25px;
   background-repeat: no-repeat;
   margin-right: 40px;
+  background-size: contain;
   p {
     white-space: normal;
     font-family: $roboto_ligt;
-    font-size: 15px;
+    @include adaptiv-font(15, 13);
     line-height: 1.8;
     padding-bottom: 8px;
   }
   .fbc-sl {
-    font-size: 22px;
+    @include adaptiv-font(22, 20);
     color: $color_accent;
     padding-bottom: 22px;
   }
   .fbc-best {
     padding-top: 32px;
-    font-size: 20px;
+    @include adaptiv-font(20, 18);
     font-family: $roboto_ligt;
     color: $color_accent;
     line-height: 1.3;
@@ -225,7 +252,7 @@ body {
     input {
       width: 100%;
       font-family: $roboto_regular;
-      font-size: 15px;
+      @include adaptiv-font(15, 13);
       text-transform: uppercase;
       color: $color_ivert;
       background-color: $color_accent;
@@ -330,24 +357,25 @@ body {
 .promo-block {
   padding-top: 60px;
   .promo-slog {
+    white-space: normal;
     p {
       color: $color_accent;
       font-family: $roboto_ligt;
-      font-size: 50px;
+      @include adaptiv-font(50, 40);
       padding-bottom: 15px;
     }
     :first-child {
-      font-size: 35px;
+      @include adaptiv-font(35, 30);
     }
     :last-child {
       font-family: $roboto_bold;
-      font-size: 30px;
+      @include adaptiv-font(30, 27);
       text-transform: uppercase;
       padding-bottom: 25px;
     }
   }
   .promo-text {
-    font-size: 20px;
+    @include adaptiv-font(20, 18);
     font-family: $roboto_ligt;
     white-space: normal;
     padding-bottom: 25px;
@@ -356,11 +384,9 @@ body {
     }
   }
   .slider-wrapp {
-    max-height: 275px;
+    height: 275px;
     position: relative;
     margin-bottom: 10px;
-    /*overflow: hidden;*/
-
     .slider-item {
       display: flex;
       flex-direction: column;
@@ -386,12 +412,15 @@ body {
         padding-top: 40px;
         .number-slide {
           font-family: $roboto_thin;
-          font-size: 60px;
+          @include adaptiv-font(60, 45);
           color: $color_lg;
           padding-bottom: 40px;
         }
         .descrip-text {
-          font-size: 20px;
+          @include adaptiv-font(20, 18);
+          p {
+            white-space: normal;
+          }
         }
       }
     }
@@ -447,7 +476,7 @@ body {
     padding-top: 65px;
     padding-bottom: 50px;
     .advant-header {
-      font-size: 30px;
+      @include adaptiv-font(30, 27);
       font-family: $roboto_bold;
       text-align: left;
       text-transform: uppercase;
@@ -487,18 +516,18 @@ body {
   align-items: center;
   .rate-quantity {
     padding-right: 60px;
-    font-size: 130px;
+    @include adaptiv-font(130, 60);
   }
   .recom-text {
     :first-child {
-      font-size: 50px;
+      @include adaptiv-font(50, 40);
     }
     p {
-      font-size: 32px;
+      @include adaptiv-font(32, 29);
     }
     :last-child {
       font-family: $roboto_bold;
-      font-size: 25px;
+      @include adaptiv-font(25, 23);
     }
   }
 }
@@ -550,7 +579,7 @@ body {
         p {
           color: $color_ivert;
           font-family: $roboto_ligt;
-          font-size: 18px;
+          @include adaptiv-font(18, 16);
           white-space: normal;
         }
       }
@@ -564,19 +593,19 @@ body {
         white-space: normal;
       }
       color: $color_accent;
-      font-size: 35px;
+      @include adaptiv-font(35, 30);
       font-family: $roboto_ligt;
       :first-child {
-        font-size: 50px;
+        @include adaptiv-font(50, 40);
       }
       :last-child {
-        font-size: 30px;
+        @include adaptiv-font(30, 27);
       }
     }
     .reson-text {
       white-space: normal;
       font-family: $roboto_regular;
-      font-size: 20px;
+      @include adaptiv-font(20, 18);
       padding-bottom: 35px;
     }
   }
@@ -611,18 +640,16 @@ body {
       padding-right: 20px;
       padding-top: 175px;
       :first-child {
-        font-size: 25px;
+        @include adaptiv-font(25, 23);
         font-family: $roboto_medium;
       }
       a {
         display: block;
         text-align: right;
-        font-size: 22px;
+        @include adaptiv-font(22, 20);
         padding-bottom: 5px;
       }
-      p {
-        text-align: right;
-        font-size: 22px;
+      :last-child {
         font-family: $roboto_regular;
         padding-top: 18px;
       }
@@ -634,12 +661,12 @@ body {
         :first-child {
           padding-top: 0px;
           font-family: $roboto_medium;
-          font-size: 25px;
+          @include adaptiv-font(25, 23);
           padding-bottom: 10px;
         }
         :last-child {
           font-family: $roboto_ligt;
-          font-size: 20px;
+          @include adaptiv-font(20, 18);
           color: $color_accent;
           padding-bottom: 20px;
           line-height: 1.2;
@@ -658,7 +685,7 @@ body {
     align-items: center;
     padding: 6px 0;
     .logo {
-      font-size: 20px;
+      @include adaptiv-font(20, 18);
       font-family: $roboto_regular;
     }
     .ft-social {
@@ -723,7 +750,7 @@ body {
       background-color: $color_ivert;
       .header-popup {
         font-family: $roboto_ligt;
-        font-size: 22px;
+        @include adaptiv-font(22, 20);
         border-bottom: 1px solid $color_accent;
         padding-bottom: 23px;
         margin-bottom: 23px;
