@@ -4,35 +4,29 @@ function init() {
     function menuSticky() { 
         let menuHeader = document.querySelector('.header-nav-wrapp'),
             headerHeigth = document.querySelector('.header_wrapper');
-        window.addEventListener('scroll', () => { 
-            let offSetHead = headerHeigth.offsetHeight - menuHeader.offsetHeight 
+        window.addEventListener('scroll', () => {
+            let offSetHead = headerHeigth.offsetHeight - menuHeader.offsetHeight
             if (pageYOffset >= offSetHead) {
-              menuHeader.classList.add('fix-head');
-          } else { 
-              if (menuHeader.classList.contains('fix-head')) {
-                  menuHeader.classList.remove('fix-head');
-              } else { 
-                  return;
-              }
-              
-          }
-
-
-        })
-        
-    }
+                menuHeader.classList.add('fix-head');
+            } else {
+                if (menuHeader.classList.contains('fix-head')) {
+                    menuHeader.classList.remove('fix-head');
+                } else {
+                    return;
+                };
+            };
+        });   
+    };
     function burgerLogic() { 
         let burger = document.querySelector('.burger-menu'),
             navMenu = document.querySelector('.header-nav');
         
-        burger.addEventListener('click', function () { 
+        burger.addEventListener('click', function () {
 
             burger.classList.toggle('bgr-active');
             navMenu.classList.toggle('bgr-active');
-        })
-
-
-    }
+        });
+    };
     function PopUpLogic() { 
         let vBody = document.querySelector('body');
             popUpCall = document.querySelector('#popup_call'),
@@ -151,7 +145,4 @@ function init() {
     PopUpLogic();
     sliderRunner();
     burgerLogic();
-
-   
-   
 };

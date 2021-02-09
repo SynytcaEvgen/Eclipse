@@ -398,13 +398,15 @@ body {
       width: 100%;
       display: none;
       .img-wrap {
-        width: 495px;
+        max-width: 495px;
+        max-height: 240px;
         img {
           width: 100%;
           height: 100%;
           position: relative;
           z-index: 3;
           cursor: pointer;
+          object-fit: contain;
         }
       }
       .slider-descrip {
@@ -481,6 +483,7 @@ body {
       text-align: left;
       text-transform: uppercase;
       padding-bottom: 60px;
+      white-space: normal;
     }
     .advant-item {
       display: flex;
@@ -579,7 +582,7 @@ body {
         p {
           color: $color_ivert;
           font-family: $roboto_ligt;
-          @include adaptiv-font(18, 16);
+          @include adaptiv-font(18, 10);
           white-space: normal;
         }
       }
@@ -587,6 +590,7 @@ body {
   }
   .gallery-resons-wrapp {
     max-width: 345px;
+    padding-left: 15px;
     .reson-head {
       padding-bottom: 50px;
       p {
@@ -661,12 +665,12 @@ body {
         :first-child {
           padding-top: 0px;
           font-family: $roboto_medium;
-          @include adaptiv-font(25, 23);
+          @include adaptiv-font(25, 18);
           padding-bottom: 10px;
         }
         :last-child {
           font-family: $roboto_ligt;
-          @include adaptiv-font(20, 18);
+          @include adaptiv-font(20, 14);
           color: $color_accent;
           padding-bottom: 20px;
           line-height: 1.2;
@@ -683,7 +687,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 0;
+    padding: 6px 15px;
     .logo {
       @include adaptiv-font(20, 18);
       font-family: $roboto_regular;
@@ -711,7 +715,7 @@ body {
 }
 #popup_galerry.popup {
   .popup__wrapper {
-    padding: 0 150px;
+    padding: 0 calc(0px + ((500) * 0.7) * ((100vw - 767px) / 1920));
     .popup__content {
       position: relative;
       width: 100%;
