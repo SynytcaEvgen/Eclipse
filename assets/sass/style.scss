@@ -722,6 +722,7 @@ body {
     .popup__content {
       position: relative;
       max-width: 100%;
+      width: inherit;
       background-color: transparent;
       padding: 0;
       img {

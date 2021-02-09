@@ -707,6 +707,7 @@ body.lock-scroll {
   #popup_galerry.popup .popup__wrapper .popup__content {
     position: relative;
     max-width: 100%;
+    width: inherit;
     background-color: transparent;
     padding: 0; }
     #popup_galerry.popup .popup__wrapper .popup__content img {
