@@ -213,4 +213,9 @@
         display: flex;
         justify-content: center; }
         .ft-red-line .border-content .social .social-items a {
-          margin: 0 4px; } }
+          margin: 0 4px; }
+  .popup .popup__wrapper {
+    padding: 0px; }
+    .popup .popup__wrapper .popup__content {
+      width: 315px;
+      padding: 50px 40px 60px; } }

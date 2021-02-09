@@ -1,3 +1,4 @@
+$padding_pop: 40px;
 @media screen and (max-width: 1150px) {
   .promo-block {
     .slider-wrapp {
@@ -341,6 +342,15 @@
             margin: 0 4px;
           }
         }
+      }
+    }
+  }
+  .popup {
+    .popup__wrapper {
+      padding: 0px;
+      .popup__content {
+        width: 235px + $padding_pop * 2;
+        padding: 50px $padding_pop 60px;
       }
     }
   }
